@@ -1,0 +1,44 @@
+---
+abstract: 'KING OF CMS'
+author:
+  - 'Devin Austin <dhoss@cpan.org>'
+build_requires:
+  FindBin: 0
+  HTTP::Request::Common: 0
+  Test::DBIx::Class: 0.28
+  Test::More: 0.88
+  Test::WWW::Mechanize::PSGI: 0.35
+configure_requires:
+  ExtUtils::MakeMaker: 6.30
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.300006, CPAN::Meta::Converter version 2.113640'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Grimlock
+requires:
+  Carp: 0
+  Catalyst: 0
+  Catalyst::Controller::REST: 0
+  Catalyst::Model::DBIC::Schema: 0
+  Catalyst::Runtime: 5.80
+  Catalyst::View::JSON: 0
+  Catalyst::View::TT: 0
+  DBIx::Class::Candy: 0
+  DBIx::Class::Core: 0
+  DBIx::Class::ResultSet: 0
+  DBIx::Class::Schema: 0
+  Data::Dumper: 0
+  Email::Sender::Simple: 0
+  Email::Simple: 0
+  Email::Simple::Creator: 0
+  HTML::Scrubber: 0
+  Moose: 0
+  Text::Password::Pronounceable: 0
+  Try::Tiny: 0
+  base: 0
+  namespace::autoclean: 0
+  strict: 0
+  warnings: 0
+version: 0.001
