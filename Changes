@@ -3,6 +3,17 @@ Changes from 2011-01-30 00:00:00 +0000 to present.
 ==================================================
 
 -------------------------------------
+version  at 2012-01-30 17:28:30 +0000
+-------------------------------------
+
+  Change: b83548f9b09956b05e211cb6efbd63a462ac383a
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-01-30 10:28:30 +0000
+
+    added twitter notifier to dzil and fixed up script installation with
+    ExecDir 
+
+-------------------------------------
 version  at 2012-01-30 17:21:54 +0000
 -------------------------------------
 
