@@ -1,4 +1,7 @@
 package Grimlock::Web::Controller::Entry;
+{
+  $Grimlock::Web::Controller::Entry::VERSION = '0.04';
+}
 use Moose;
 use namespace::autoclean;
 use Try::Tiny;

@@ -1,4 +1,7 @@
 package Grimlock::Web::View::JSON;
+{
+  $Grimlock::Web::View::JSON::VERSION = '0.04';
+}
 
 use strict;
 use base 'Catalyst::View::JSON';

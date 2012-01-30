@@ -1,4 +1,7 @@
 package Grimlock::Schema::Result::User;
+{
+  $Grimlock::Schema::Result::User::VERSION = '0.04';
+}
 
 use Grimlock::Schema::Candy -components => [
   qw(

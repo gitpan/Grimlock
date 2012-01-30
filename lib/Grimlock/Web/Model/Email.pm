@@ -1,4 +1,7 @@
 package Grimlock::Web::Model::Email;
+{
+  $Grimlock::Web::Model::Email::VERSION = '0.04';
+}
 use Moose;
 use namespace::autoclean;
 use Email::Sender::Simple qw(sendmail);

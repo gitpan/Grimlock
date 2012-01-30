@@ -1,4 +1,7 @@
 package Grimlock::Web::Controller::Root;
+{
+  $Grimlock::Web::Controller::Root::VERSION = '0.04';
+}
 use Moose;
 use namespace::autoclean;
 

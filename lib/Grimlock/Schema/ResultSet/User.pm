@@ -1,4 +1,7 @@
 package Grimlock::Schema::ResultSet::User;
+{
+  $Grimlock::Schema::ResultSet::User::VERSION = '0.04';
+}
 use strict;
 use warnings;
 use base 'DBIx::Class::ResultSet';
