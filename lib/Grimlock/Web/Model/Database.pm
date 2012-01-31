@@ -1,6 +1,6 @@
 package Grimlock::Web::Model::Database;
 {
-  $Grimlock::Web::Model::Database::VERSION = '0.032';
+  $Grimlock::Web::Model::Database::VERSION = '0.05';
 }
 
 use strict;

@@ -1,6 +1,6 @@
 package Grimlock::Web::View::JSON;
 {
-  $Grimlock::Web::View::JSON::VERSION = '0.032';
+  $Grimlock::Web::View::JSON::VERSION = '0.05';
 }
 
 use strict;
