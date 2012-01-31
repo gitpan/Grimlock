@@ -20,7 +20,11 @@ my %WriteMakefileArgs = (
     "ExtUtils::MakeMaker" => "6.30"
   },
   "DISTNAME" => "Grimlock",
-  "EXE_FILES" => [],
+  "EXE_FILES" => [
+    "script/grimlock_deploy_schema.pl",
+    "script/grimlock_web_create.pl",
+    "script/grimlock_web_server.pl"
+  ],
   "LICENSE" => "perl",
   "NAME" => "Grimlock",
   "PREREQ_PM" => {
@@ -49,12 +53,14 @@ my %WriteMakefileArgs = (
     "DBIx::Class::Helper::Row::ToJSON" => 0,
     "Data::Manager" => 0,
     "Email::Sender::Simple" => 0,
+    "HTML::Scrubber" => 0,
     "Moose" => 0,
     "Template::Plugin::Filter::String::Truncate" => "0.02",
     "Text::Password::Pronounceable" => 0,
+    "feature" => 0,
     "namespace::autoclean" => 0
   },
-  "VERSION" => "0.04",
+  "VERSION" => "0.032",
   "test" => {
     "TESTS" => "t/*.t"
   }

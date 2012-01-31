@@ -1,6 +1,22 @@
 ==================================================
-Changes from 2011-01-30 00:00:00 +0000 to present.
+Changes from 2011-01-31 00:00:00 +0000 to present.
 ==================================================
+
+-------------------------------------
+version  at 2012-01-31 18:58:13 +0000
+-------------------------------------
+
+  Change: 6387c3aac480ab05cf476ee62201e10352423336
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-01-31 11:58:13 +0000
+
+    added TODO and fixed up ExecDir plugin stuff 
+
+  Change: 9f12e2d7b23c93ed21b76de770aa7ca009b79242
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-01-30 21:02:57 +0000
+
+    updated dist.ini with prereqs from failures 
 
 -------------------------------------
 version  at 2012-01-30 20:48:51 +0000

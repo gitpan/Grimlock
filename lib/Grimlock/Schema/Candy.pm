@@ -1,6 +1,6 @@
 package Grimlock::Schema::Candy;
 {
-  $Grimlock::Schema::Candy::VERSION = '0.04';
+  $Grimlock::Schema::Candy::VERSION = '0.032';
 }
  
 use base 'DBIx::Class::Candy';

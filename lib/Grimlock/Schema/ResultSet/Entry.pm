@@ -1,6 +1,6 @@
 package Grimlock::Schema::ResultSet::Entry;
 {
-  $Grimlock::Schema::ResultSet::Entry::VERSION = '0.04';
+  $Grimlock::Schema::ResultSet::Entry::VERSION = '0.032';
 }
 use strict;
 use warnings;

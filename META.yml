@@ -41,10 +41,12 @@ requires:
   DBIx::Class::Helper::Row::ToJSON: 0
   Data::Manager: 0
   Email::Sender::Simple: 0
+  HTML::Scrubber: 0
   Moose: 0
   Template::Plugin::Filter::String::Truncate: 0.02
   Text::Password::Pronounceable: 0
+  feature: 0
   namespace::autoclean: 0
 resources:
   repository: git://github.com/dhoss/Grimlock.git
-version: 0.04
+version: 0.032

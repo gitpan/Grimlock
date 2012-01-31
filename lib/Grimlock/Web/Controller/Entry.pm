@@ -1,6 +1,6 @@
 package Grimlock::Web::Controller::Entry;
 {
-  $Grimlock::Web::Controller::Entry::VERSION = '0.04';
+  $Grimlock::Web::Controller::Entry::VERSION = '0.032';
 }
 use Moose;
 use namespace::autoclean;
