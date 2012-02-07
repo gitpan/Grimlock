@@ -1,6 +1,6 @@
 package Grimlock::Web::View::HTML;
 {
-  $Grimlock::Web::View::HTML::VERSION = '0.05';
+  $Grimlock::Web::View::HTML::VERSION = '0.06';
 }
 
 use strict;

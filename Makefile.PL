@@ -46,10 +46,11 @@ my %WriteMakefileArgs = (
     "Catalyst::View::JSON" => 0,
     "Catalyst::View::TT" => 0,
     "Config::General" => 0,
+    "Crypt::Eksblowfish::Bcrypt" => 0,
     "DBICx::MaterializedPath" => "0.03",
     "DBIx::Class" => "0.08196",
     "DBIx::Class::Candy" => 0,
-    "DBIx::Class::EncodedColumn::Crypt::Eksblowfish::Bcrypt" => 0,
+    "DBIx::Class::EncodedColumn::Crypt::Eksblowfish::Bcrypt" => "0.00011",
     "DBIx::Class::Helper::Row::ToJSON" => 0,
     "Data::Manager" => 0,
     "Email::Sender::Simple" => 0,
@@ -60,7 +61,7 @@ my %WriteMakefileArgs = (
     "feature" => 0,
     "namespace::autoclean" => 0
   },
-  "VERSION" => "0.05",
+  "VERSION" => "0.06",
   "test" => {
     "TESTS" => "t/*.t"
   }

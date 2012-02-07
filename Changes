@@ -1,6 +1,23 @@
 ==================================================
-Changes from 2011-01-31 00:00:00 +0000 to present.
+Changes from 2011-02-07 00:00:00 +0000 to present.
 ==================================================
+
+-------------------------------------
+version  at 2012-02-07 19:16:02 +0000
+-------------------------------------
+
+  Change: 536122891c9c62c1cfb5097e601499c2c51adf01
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-07 12:16:02 +0000
+
+    updated deps to include Crypt::Eksblowfish::Bcrypt and
+    DBIC::EncodedColumn::Crypt::Eksblowfish::Bcrypt v0.00011 
+
+  Change: 5dcabf58104e83ebac10015390e0bead21d63035
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-01-31 13:27:56 +0000
+
+    POD format fix 
 
 -------------------------------------
 version  at 2012-01-31 18:58:13 +0000

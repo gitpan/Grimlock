@@ -1,6 +1,6 @@
 package Grimlock::Schema::Result::User;
 {
-  $Grimlock::Schema::Result::User::VERSION = '0.05';
+  $Grimlock::Schema::Result::User::VERSION = '0.06';
 }
 
 use Grimlock::Schema::Candy -components => [
