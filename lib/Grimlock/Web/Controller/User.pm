@@ -1,6 +1,6 @@
 package Grimlock::Web::Controller::User;
 {
-  $Grimlock::Web::Controller::User::VERSION = '0.06';
+  $Grimlock::Web::Controller::User::VERSION = '0.07';
 }
 use Moose;
 use namespace::autoclean;
@@ -106,7 +106,6 @@ sub create : Chained('base') PathPart('user') Args(0) ActionClass('REST') {}
 sub create_POST {
   my ( $self, $c ) = @_;
   my $params ||= $c->req->data || $c->req->params;
-  $c->log->debug("POST PARAMS " . Dumper $params );
   my $user;
   try {
 
@@ -176,7 +175,6 @@ sub browse_PUT {
       }
     }
     $user->update || die $!;
-    $c->log->debug("USER IN UPDATE" . $user->name);
     return $self->status_ok($c, 
       entity => {
         user => $user 
@@ -264,11 +262,40 @@ sub entries_GET {
   my ( $self, $c ) = @_;
   my $user = $c->stash->{'user'};
   my $entry_rs = $user->entries;
-  $c->log->debug("User " . Dumper $user);
   return $self->status_ok($c,
     entity => {
-      entries => [$entry_rs->all],
+      entries => [ $entry_rs->all ],
       user    => $user
+    }
+  );
+}
+
+sub manage_entries : Chained('load_user') PathPart('entries/manage') Args(0) ActionClass('REST') {
+  my ( $self, $c ) = @_;
+
+}
+
+sub manage_entries_GET {
+  my ( $self, $c ) = @_;
+  my $user = $c->stash->{'user'};
+  my $entry_rs = $user->entries;
+  return $self->status_ok($c,
+    entity =>{
+      data_table => [ $entry_rs->all ],
+    }
+  );
+
+}
+
+sub list_drafts :  Chained('load_user') PathPart('drafts') Args(0) ActionClass('REST') {}
+
+sub list_drafts_GET {
+  my ( $self, $c ) = @_;
+  my $user = $c->stash->{'user'};
+  my $drafts = $user->drafts;
+  return $self->status_ok($c,
+    entity => {
+      data_table => [$drafts->all]
     }
   );
 }

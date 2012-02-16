@@ -1,6 +1,6 @@
 package Grimlock::Web::Controller::Root;
 {
-  $Grimlock::Web::Controller::Root::VERSION = '0.06';
+  $Grimlock::Web::Controller::Root::VERSION = '0.07';
 }
 use Moose;
 use namespace::autoclean;
@@ -39,7 +39,7 @@ sub index_GET {
   my ( $self, $c ) = @_;
   return $self->status_ok($c, 
     entity => {
-      entries => $c->model('Database::Entry')->front_page_entries
+      entries => [ $c->model('Database::Entry')->front_page_entries ]
     }
   );
 }

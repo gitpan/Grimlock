@@ -1,6 +1,6 @@
 package Grimlock::Schema::Result::User;
 {
-  $Grimlock::Schema::Result::User::VERSION = '0.06';
+  $Grimlock::Schema::Result::User::VERSION = '0.07';
 }
 
 use Grimlock::Schema::Candy -components => [
@@ -61,6 +61,10 @@ has_many 'entries' => 'Grimlock::Schema::Result::Entry', {
   'foreign.author' => 'self.userid',
 };
 
+has_many 'drafts' => 'Grimlock::Schema::Result::Draft', {
+  'foreign.author' => 'self.userid',
+};
+
 has_many 'user_roles' => 'Grimlock::Schema::Result::UserRole', {
   'foreign.userid' => 'self.userid'
 };
@@ -106,5 +110,34 @@ sub create_entry {
   my ( $self, $params ) = @_;
   $self->add_to_entries($params);
 }
+
+sub TO_JSON {
+  my $self = shift;
+  return {
+    created_at => $self->created_at . "",
+    updated_at => $self->updated_at . "",
+    entries => $self->entries_TO_JSON,
+    %{ $self->next::method },
+  };
+}
+
+sub entries_TO_JSON {
+  my $self = shift;
+  my $entry_rs = $self->entries;
+  my @entry_collection;
+  push @entry_collection, {
+    entryid => $_->entryid,
+    title   => $_->title,
+  } for $entry_rs->all;
+  
+  return \@entry_collection;
+}
+
+sub draft_count {
+  my $self = shift;
+  return $self->drafts->count;
+}
+
+
 
 1;

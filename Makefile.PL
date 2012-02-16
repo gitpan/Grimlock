@@ -6,6 +6,8 @@ use warnings;
 
 use ExtUtils::MakeMaker 6.30;
 
+use File::ShareDir::Install;
+install_share dist => "root";
 
 
 my %WriteMakefileArgs = (
@@ -17,7 +19,8 @@ my %WriteMakefileArgs = (
     "Test::WWW::Mechanize::PSGI" => "0.35"
   },
   "CONFIGURE_REQUIRES" => {
-    "ExtUtils::MakeMaker" => "6.30"
+    "ExtUtils::MakeMaker" => "6.30",
+    "File::ShareDir::Install" => "0.03"
   },
   "DISTNAME" => "Grimlock",
   "EXE_FILES" => [
@@ -31,8 +34,8 @@ my %WriteMakefileArgs = (
     "Bread::Board" => 0,
     "Catalyst::Action::RenderView" => 0,
     "Catalyst::Authentication::Store::DBIx::Class" => 0,
-    "Catalyst::Controller::REST" => 0,
-    "Catalyst::Model::DBIC::Schema" => 0,
+    "Catalyst::Controller::REST" => "0.96",
+    "Catalyst::Model::DBIC::Schema" => "0.59",
     "Catalyst::Plugin::Authentication" => 0,
     "Catalyst::Plugin::Authorization::Roles" => 0,
     "Catalyst::Plugin::ConfigLoader" => 0,
@@ -46,22 +49,24 @@ my %WriteMakefileArgs = (
     "Catalyst::View::JSON" => 0,
     "Catalyst::View::TT" => 0,
     "Config::General" => 0,
-    "Crypt::Eksblowfish::Bcrypt" => 0,
+    "Config::JFDI" => 0,
+    "Crypt::Eksblowfish::Bcrypt" => "0.009",
     "DBICx::MaterializedPath" => "0.03",
     "DBIx::Class" => "0.08196",
-    "DBIx::Class::Candy" => 0,
+    "DBIx::Class::Candy" => "0.002001",
     "DBIx::Class::EncodedColumn::Crypt::Eksblowfish::Bcrypt" => "0.00011",
     "DBIx::Class::Helper::Row::ToJSON" => 0,
     "Data::Manager" => 0,
     "Email::Sender::Simple" => 0,
     "HTML::Scrubber" => 0,
-    "Moose" => 0,
+    "Moose" => "2.0402",
+    "SQL::Translator" => "0.11010",
     "Template::Plugin::Filter::String::Truncate" => "0.02",
     "Text::Password::Pronounceable" => 0,
     "feature" => 0,
     "namespace::autoclean" => 0
   },
-  "VERSION" => "0.06",
+  "VERSION" => "0.07",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -86,5 +91,8 @@ delete $WriteMakefileArgs{CONFIGURE_REQUIRES}
 
 WriteMakefile(%WriteMakefileArgs);
 
+package
+MY;
+use File::ShareDir::Install qw(postamble);
 
 

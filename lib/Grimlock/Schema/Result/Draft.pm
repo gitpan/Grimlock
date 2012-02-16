@@ -1,21 +1,19 @@
-package Grimlock::Schema::Result::Entry;
+package Grimlock::Schema::Result::Draft;
 {
-  $Grimlock::Schema::Result::Entry::VERSION = '0.07';
+  $Grimlock::Schema::Result::Draft::VERSION = '0.07';
 }
 
 use Grimlock::Schema::Candy -components => [
   qw(
       TimeStamp
       Helper::Row::ToJSON
-      +DBICx::MaterializedPath
       )
 ];
 
 use HTML::Scrubber;
 
-resultset_class 'Grimlock::Schema::ResultSet::Entry';
 
-primary_column entryid => {
+primary_column draftid => {
   data_type => 'int',
   is_nullable => 0,
   is_auto_increment => 1,
@@ -31,20 +29,7 @@ unique_column title => {
 unique_column display_title => {
   data_type => 'varchar',
   size => 200,
-  is_nullable => 0,
-};
-
-column path => {
-  data_type => 'varchar',
-  size      => 255,
-  is_nullable => 1
-};
-
-column parent => {
-  data_type => 'bigint',
-  is_nullable => 1,
-  extra => { unsigned => 1 },
-  is_foreign_key => 1
+  is_nullable => 0
 };
 
 column body => {
@@ -72,29 +57,11 @@ column updated_at => {
   set_on_update => 1
 };
 
-column published => {
-  data_type => 'tinyint',
-  is_nullable => 0,
-  default_value => 0
-};
 
 belongs_to 'author' => 'Grimlock::Schema::Result::User', {
   'foreign.userid' => 'self.author',
 };
 
-belongs_to 'parent' => __PACKAGE__, {
-  'foreign.entryid' => 'self.parent',
-},
-{
-  join_type => 'LEFT',
-};
-
-has_many 'children' => __PACKAGE__, {
-  'foreign.parent' => 'self.entryid'
-};
-
-__PACKAGE__->mk_classdata( path_column => "path" );
-__PACKAGE__->mk_classdata( path_separator => "." );
 
 sub insert {
   my ( $self, @args ) = @_;
@@ -103,12 +70,12 @@ sub insert {
   my $guard = $self->result_source->schema->txn_scope_guard;
   
   $self->clean_params([qw( title body )]);
-
-  # move me to a filter class
+   # move me to a filter class
   my $title = $self->title;
   $title =~ s{(\W+|\s+|\_)}{-}g;
   chomp $title if $title =~ m/\W$/;
   $self->display_title($title);
+
   $self->next::method(@args);
   
   $guard->commit;
@@ -136,12 +103,7 @@ sub clean_params {
 sub sqlt_deploy_hook {
   my ($self, $sqlt_table) = @_;
  
-  $sqlt_table->add_index(name => 'tree_data', fields => ['parent']);
-}
-
-sub reply_count {
-  my $self = shift;
-  return $self->children->count;
+  $sqlt_table->add_index(name => 'user_drafts', fields => ['draftid', 'author']);
 }
 
 sub created_at {
@@ -159,35 +121,10 @@ sub created_at {
 sub TO_JSON {
   my $self = shift;
   return {
-    reply_count => $self->reply_count,
-    children => $self->children_TO_JSON,
-    parent   => $self->parent,
     body     => $self->body,
     %{ $self->next::method },
   }
 }
 
-sub children_TO_JSON {
-  my $self = shift;
-  my $children_rs = $self->children;
-  my @child_collection;
-  push @child_collection, {
-    entryid => $_->entryid,
-    title   => $_->title,
-    display_title => $_->display_title,
-    path    => $_->path,
-    parent  => $_->parent,
-    body    => $_->body,
-    author  => $_->author,
-    created_at => $_->created_at . "",
-    updated_at => $_->updated_at . "",
-    published => $_->published,
-    reply_count => $_->reply_count,
-    children => $_->children_TO_JSON,
-    parent   => $_->parent,
-  } for $children_rs->all;
-  
-  return \@child_collection;
-}
 
 1;

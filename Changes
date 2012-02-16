@@ -1,6 +1,305 @@
 ==================================================
-Changes from 2011-02-07 00:00:00 +0000 to present.
+Changes from 2011-02-16 00:00:00 +0000 to present.
 ==================================================
+
+-------------------------------------
+version  at 2012-02-16 22:13:15 +0000
+-------------------------------------
+
+  Change: 9581f009e8a9de12eccfc354ef141f8eb79a4317
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-16 15:13:15 +0000
+
+    added SQL::Translator dep 
+
+  Change: 2f408e3afb1658aeec7fd9f92406a004bf49a77a
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-16 15:09:59 +0000
+
+    fixed up small typo in entry test 
+
+  Change: d97f17d9a6d3d3a2fe7575bd168ba80c0a9b33e6
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-16 14:42:38 +0000
+
+    drafts delete ok" 
+
+  Change: 86981899b22121317aa5c5e701f130fa3afbc92a
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-15 14:56:45 +0000
+
+    moved datatable stuff to its own template 
+
+  Change: cf226979c5872e1f822d9a3746ed6d0d9d625852
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-15 13:04:17 +0000
+
+    added sane draft saving (ui side at least)" 
+
+  Change: bca3d317b1e4de645c3dded63aea268d90470294
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-14 11:52:06 +0000
+
+    added disply_title column to draft table, updated tests to search for
+    drafts by title 
+
+  Change: 7feb58a5651fbd5faaeb58cb8d12745b3028b8c4
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-14 11:34:54 +0000
+
+    added catalyst 5.9 
+
+  Change: eb5b67365a3a17890ee4005f2b83a525d3efe39c
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-14 11:34:37 +0000
+
+    added debug stuff to base chain 
+
+  Change: 703f02b1cce1175b0f509088bb735fcc3b0fa0e0
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-14 11:34:16 +0000
+
+    whoops, left draft name in url instead of entry 
+
+  Change: 6407074258f05eb928c55fcb7e0bf004bbe746e9
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-14 11:26:45 +0000
+
+    added test config, fixed up test config in entry test 
+
+  Change: cae14fc86dbe70b390b556ec4c0c5e124d0cb7fc
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-09 17:31:21 +0000
+
+    checkboxes for edit records works 
+
+  Change: f1c7766ad9e1a69235a3369670ea04baed9fe5be
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-09 13:23:50 +0000
+
+    add draft listing template, listing drafts works 
+
+  Change: f69cdf138010509ae99b05caafb8178d6b6b91d1
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-08 16:23:55 +0000
+
+    managing drafts works, drafts are saved as entries upon modification 
+
+  Change: 089a40adea0ef2c1c01a065961c8254349364aef
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-08 15:52:13 +0000
+
+    added basic draft functionality 
+
+  Change: c65cdc8c43d16e4b26f41e9f62332965d548e860
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-08 15:22:28 +0000
+
+    added polling for draft saving 
+
+  Change: 788792be1b5eec11c722fb6816aecfab273d29b6
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-08 14:16:26 +0000
+
+    added sharedir plugin 
+
+  Change: 422ee14d049452928657580c23b2346890967545
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-07 15:08:02 +0000
+
+    fixed merge conflict 
+
+  Change: edddef2e0d4965740ea9385c6632402180d22330
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-07 15:07:10 +0000
+
+    added test for entry deletion 
+
+  Change: ec3e2fb77767f87406f44a7b6e71cba60ba9d289
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-07 15:06:27 +0000
+
+    entry deletion works 
+
+  Change: 9e9aea2482fed6f9482b2b6a5f91c2a1d14b519f
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-07 15:04:17 +0000
+
+    entry deletion works 
+
+  Change: 5e9582e435c1cbb212c5aa4863ef2c6a69d2ed4f
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-07 14:51:20 +0000
+
+    editing entries works 
+
+  Change: bc3cb168d2aaf94d1b3736dac562563b307ebdb3
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-07 14:35:50 +0000
+
+    slight doc fix 
+
+  Change: 0ebdad0e889d4ed05ff0e39e2635eda9979a7898
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-07 13:42:32 +0000
+
+    fixed up form fields to save on edit 
+
+  Change: 4437308e86b2cf562982a65c027e6ef3b62b18d6
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-06 15:57:01 +0000
+
+    body populates properly 
+
+  Change: d801f64884c31cc7cea2a3ec82acb70e7e98210d
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-06 15:52:33 +0000
+
+    adjusted css 
+
+  Change: bbfe13f38e53a87d3c5215db51b55534acee97e6
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-06 15:46:17 +0000
+
+    fixed up merge errors from no branch 
+
+  Change: d989fe92f3dbcd37f718a2f411f75b1c0ae86ab0
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-06 15:37:18 +0000
+
+    fixed up entry json to include entry body 
+
+  Change: 41871fe1177c925c60de34c8aceed4e5e863cb91
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-06 15:24:27 +0000
+
+    fixed onclick stuff 
+
+  Change: 3d7190273055c426f36cbc719b5f0e7726f9cc8a
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-06 13:47:26 +0000
+
+    added a bunch of widgets 
+
+  Change: 69110ceaa3ff22c7439416a95b0c97759b43453f
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-06 13:36:27 +0000
+
+    added helper methods 
+
+  Change: bfda83d6d5f9723ee38011b779f0916d0b3d4190
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-06 13:33:25 +0000
+
+    added edit/delete buttons 
+
+  Change: fb3955a232a7b2a6b902db93772573eac6743bf2
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-06 12:40:50 +0000
+
+    fixed merge conflict from stash pop 
+
+  Change: e82a84898ea80ed4b7988701932a00192906bae1
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-06 12:39:46 +0000
+
+    using ds.after(...) 
+
+  Change: 5a64250be5271d825fb4a634a41a04b00a27a42f
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-06 11:29:38 +0000
+
+    basic datatable achieved 
+
+  Change: e49c505a7c683ae4cc3ca18576176c0e49f21f2f
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-05 19:18:43 +0000
+
+    new entry dialog renders correctly 
+
+  Change: 5ca9e1f7e00c160cf3bd326348edd2a659112b8f
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-05 18:33:51 +0000
+
+    making request properl but not rendering properly 
+
+  Change: a9e632532020538c985a8da745a7870b5fd143b5
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-05 16:27:40 +0000
+
+    added edit/delete images 
+
+  Change: ce613403258f8ffd07b6a59f9db8d8ecf2d3d665
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-05 16:17:56 +0000
+
+    fixed up body class from yui->yui3 
+
+  Change: aad332f71ed1dffd14e7fd96f6046f8720346088
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-05 16:00:56 +0000
+
+    using 3.5 datagrid now 
+
+  Change: b1513b9eb82454d88cdf71e5d978dfc0c3bc7335
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-02 14:32:51 +0000
+
+    added more columns to display 
+
+  Change: f93440144b4aa17acbda8791fa30c6ca2eb22e46
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-01 14:46:41 +0000
+
+    added more column names 
+
+  Change: c8d8f020f0652fcbe75f6e0e7505dc450a02cf4f
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-01 14:41:50 +0000
+
+    YUI displays json results properly now 
+
+  Change: f35226fbda8ee4ad5158e8d8b81a5ffd485d9eb4
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-01 14:01:00 +0000
+
+    got YUI3 call working 
+
+  Change: 34b92ec44ebd08c08e6901861a3289ee0d258c52
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-01 13:05:21 +0000
+
+    JSON is rendered properly for user entries 
+
+  Change: 0ef78ee10e113eeef2d3ffaf8996b29a569b7dac
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-01 10:31:16 +0000
+
+    added missing bcrypt dep 
+
+  Change: a7cf667e832522c15966e9bbfe48a7ffd5ab2d82
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-01-31 15:17:27 +0000
+
+    added a bunch of YUI and authed stuff for nav etc 
+
+  Change: 71f9f948ee22cb96775bb455b67f6d1015fc140b
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-01-31 13:49:03 +0000
+
+    updated base.tt 
+
+  Change: 84220df50082544a5764733e11cc1abe555c8430
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-01-31 13:45:36 +0000
+
+    added in new UI changes 
+
+  Change: 45f35a5f4fe62f320ecdc75a119dfef0c974c746
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-01-31 13:39:30 +0000
+
+    updated to View::TT::Bootstrap::YUI 
 
 -------------------------------------
 version  at 2012-02-07 19:16:02 +0000

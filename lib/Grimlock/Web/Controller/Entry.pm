@@ -1,6 +1,6 @@
 package Grimlock::Web::Controller::Entry;
 {
-  $Grimlock::Web::Controller::Entry::VERSION = '0.06';
+  $Grimlock::Web::Controller::Entry::VERSION = '0.07';
 }
 use Moose;
 use namespace::autoclean;
@@ -47,6 +47,7 @@ sub create_GET {
       message => "You must be logged in to create an entry"
     );
   }
+  my $user = $c->user;
   $self->status_ok( $c, entity => {} );
 }
 
@@ -150,6 +151,40 @@ sub browse_GET {
   );
 
 }
+
+sub browse_PUT {
+  my ( $self, $c ) = @_;
+  my $entry = $c->stash->{'entry'};
+  my $params ||= $c->req->data || $c->req->params;
+  $params->{'published'} = $params->{'published'} eq 'on' ? 1 : 0;
+  $entry->update($params) || return $self->status_bad_request($c,
+    message => "Couldn't update entry; $!"
+  );
+
+   return $self->status_ok($c,
+    entity => {
+      entry => $entry
+    }
+  );
+}
+
+sub browse_DELETE {
+  my ( $self, $c ) = @_;
+  my $entry = $c->stash->{'entry'};
+  $entry->delete || return $self->status_bad_request($c,
+    message => "Couldn't delete entry: $!"
+  );
+
+  return $self->status_ok($c,
+    entity => {
+      deleted => 1
+    }
+  );
+}
+
+
+
+
 
 =head1 AUTHOR
 

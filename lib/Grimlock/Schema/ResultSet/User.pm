@@ -1,6 +1,6 @@
 package Grimlock::Schema::ResultSet::User;
 {
-  $Grimlock::Schema::ResultSet::User::VERSION = '0.06';
+  $Grimlock::Schema::ResultSet::User::VERSION = '0.07';
 }
 use strict;
 use warnings;

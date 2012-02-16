@@ -1,8 +1,11 @@
 package Grimlock::Web;
+{
+  $Grimlock::Web::VERSION = '0.07';
+}
 use Moose;
 use namespace::autoclean;
 
-use Catalyst::Runtime 5.80;
+use Catalyst::Runtime 5.90;
 
 # Set flags and add plugins for the application.
 #
@@ -29,7 +32,6 @@ use Catalyst qw/
 
 extends 'Catalyst';
 
-our $VERSION = '0.01';
 
 # Configure the application.
 #

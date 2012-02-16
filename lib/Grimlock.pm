@@ -1,6 +1,6 @@
 package Grimlock;
 {
-  $Grimlock::VERSION = '0.06';
+  $Grimlock::VERSION = '0.07';
 }
 
 =head1 NAME
@@ -11,11 +11,11 @@ Grimlock - KING OF CMS
 
 ME GRIMLOCK SAY YOU MUST MAKE DATABASE
 
-  dbicadmin -Ilib --schema=Grimlock::Schema   --connect='["dbi:SQLite:grimlock.db", "", ""]' --deploy
+  dbicadmin --schema=Grimlock::Schema   --connect='["dbi:SQLite:grimlock.db", "", ""]' --deploy
 
 OR FOR DATABASE THAT NO SUCK 
 
-  dbicadmin -Ilib --schema=Grimlock::Schema   --connect='["dbi:Pg:dbname=grimlock", "grimlock", "king!"]' --deploy
+  dbicadmin --schema=Grimlock::Schema   --connect='["dbi:Pg:dbname=grimlock", "grimlock", "king!"]' --deploy
 
 NOW RUN TEST SERVER 
 

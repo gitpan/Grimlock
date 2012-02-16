@@ -8,12 +8,15 @@ use lib "$Bin/../t/lib";
 use Data::Dumper;
 use Test::DBIx::Class qw(:resultsets);
 
+
 BEGIN { 
   $ENV{DBIC_TRACE} = 1;
   $ENV{CATALYST_CONFIG} = "t/grimlock_web_test.conf"
 }
-# must be AFTER this begin statement so that these env vars take root properly
+
 use Grimlock::Web;
+
+
 
 # create role records
 fixtures_ok 'user'
@@ -25,7 +28,7 @@ my $mech = Test::WWW::Mechanize::PSGI->new(
 );
 
 # try to create draft without auth
-$mech->post('/entry', 
+$mech->post('/draft', 
   Content_Type => 'application/x-www-form-urlencoded',
   Content => {
     title => 'test',
@@ -48,7 +51,7 @@ BAIL_OUT "can't log in" unless $mech->success;
 
 ok $mech->success, "logged in ok";
 
-$mech->post('/entry',
+$mech->post('/draft',
  Content_Type => 'application/x-www-form-urlencoded',
   Content => {
     title => 'test title with spaces! <script>alert("and javascript!")</script>',
@@ -57,21 +60,9 @@ $mech->post('/entry',
 );
 
 ok $mech->success, "POST worked";
-$mech->get_ok('/test-title-with-spaces-');
-ok $mech->content_lacks('<script>alert("and javascript!")</script>'), "no scripts here";
-ok $mech->content_contains("derp"), "content is correct";
+$mech->get_ok('/draft/test-title-with-spaces-');
 
-$mech->post('/test-title-with-spaces-/reply',
- Content_Type => 'application/x-www-form-urlencoded',
-  Content => {
-    title => 'reply test',
-    body => 'derpen'
-  }
-);
-
-ok $mech->success, "reply post works ok";
-
-$mech->request( DELETE '/test-title-with-spaces-' );
+$mech->request( DELETE '/draft/test-title-with-spaces-' );
 ok $mech->success, "draft deletion works";
 
 done_testing();
