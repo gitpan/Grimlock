@@ -44,6 +44,7 @@ requires:
   DBIx::Class::Helper::Row::ToJSON: 0
   Data::Manager: 0
   Email::Sender::Simple: 0
+  File::ShareDir: 1.03
   HTML::Scrubber: 0
   Moose: 2.0402
   SQL::Translator: 0.11010
@@ -53,4 +54,4 @@ requires:
   namespace::autoclean: 0
 resources:
   repository: git://github.com/dhoss/Grimlock.git
-version: 0.07
+version: 0.08

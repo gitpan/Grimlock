@@ -1,6 +1,6 @@
 package Grimlock::Web::Model::Email;
 {
-  $Grimlock::Web::Model::Email::VERSION = '0.07';
+  $Grimlock::Web::Model::Email::VERSION = '0.08';
 }
 use Moose;
 use namespace::autoclean;

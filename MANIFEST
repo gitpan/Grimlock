@@ -72,6 +72,7 @@ root/static/images/btn_88x31_powered_shadow.png
 root/static/images/catalyst_logo.png
 root/static/images/delete.png
 script/grimlock_deploy_schema.pl
+script/grimlock_web.psgi
 script/grimlock_web_create.pl
 script/grimlock_web_server.pl
 sql/c040455291b2b29e4367-index.sql

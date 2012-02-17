@@ -1,6 +1,6 @@
 package Grimlock::Web;
 {
-  $Grimlock::Web::VERSION = '0.07';
+  $Grimlock::Web::VERSION = '0.08';
 }
 use Moose;
 use namespace::autoclean;

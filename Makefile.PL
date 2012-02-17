@@ -25,6 +25,7 @@ my %WriteMakefileArgs = (
   "DISTNAME" => "Grimlock",
   "EXE_FILES" => [
     "script/grimlock_deploy_schema.pl",
+    "script/grimlock_web.psgi",
     "script/grimlock_web_create.pl",
     "script/grimlock_web_server.pl"
   ],
@@ -58,6 +59,7 @@ my %WriteMakefileArgs = (
     "DBIx::Class::Helper::Row::ToJSON" => 0,
     "Data::Manager" => 0,
     "Email::Sender::Simple" => 0,
+    "File::ShareDir" => "1.03",
     "HTML::Scrubber" => 0,
     "Moose" => "2.0402",
     "SQL::Translator" => "0.11010",
@@ -66,7 +68,7 @@ my %WriteMakefileArgs = (
     "feature" => 0,
     "namespace::autoclean" => 0
   },
-  "VERSION" => "0.07",
+  "VERSION" => "0.08",
   "test" => {
     "TESTS" => "t/*.t"
   }

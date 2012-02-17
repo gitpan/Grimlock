@@ -1,6 +1,38 @@
 ==================================================
-Changes from 2011-02-16 00:00:00 +0000 to present.
+Changes from 2011-02-17 00:00:00 +0000 to present.
 ==================================================
+
+-----------------------------------------
+version 0.08 at 2012-02-17 22:41:29 +0000
+-----------------------------------------
+
+  Change: 7f8b78bcd0d0761f961fbe573b6a1bcb37581d55
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-17 15:35:08 +0000
+
+    slight fix to script 
+
+-------------------------------------
+version  at 2012-02-17 22:31:45 +0000
+-------------------------------------
+
+  Change: a84927d94cd4d420778b46e0da51d53a395c4bc9
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-17 15:31:45 +0000
+
+    slight modification to script 
+
+  Change: 3522bac5cba93d0e36ead3db289aa5c6767aafbc
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-17 15:29:42 +0000
+
+    added psgi script 
+
+  Change: c3932c4906e4746b731fac1f316769972e6449ee
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-17 15:18:15 +0000
+
+    added File::ShareDir to view stuff 
 
 -------------------------------------
 version  at 2012-02-16 22:13:15 +0000

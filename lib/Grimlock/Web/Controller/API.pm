@@ -1,6 +1,6 @@
 package Grimlock::Web::Controller::API;
 {
-  $Grimlock::Web::Controller::API::VERSION = '0.07';
+  $Grimlock::Web::Controller::API::VERSION = '0.08';
 }
 
 use Moose;

@@ -1,6 +1,6 @@
 package Grimlock::Web::Controller::User;
 {
-  $Grimlock::Web::Controller::User::VERSION = '0.07';
+  $Grimlock::Web::Controller::User::VERSION = '0.08';
 }
 use Moose;
 use namespace::autoclean;
