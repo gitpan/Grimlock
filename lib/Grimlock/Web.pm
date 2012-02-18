@@ -1,6 +1,6 @@
 package Grimlock::Web;
 {
-  $Grimlock::Web::VERSION = '0.08';
+  $Grimlock::Web::VERSION = '0.10';
 }
 use Moose;
 use namespace::autoclean;
@@ -20,7 +20,6 @@ use Catalyst::Runtime 5.90;
 #                 directory
 
 use Catalyst qw/
-    -Debug
     ConfigLoader
     Static::Simple
     Authentication

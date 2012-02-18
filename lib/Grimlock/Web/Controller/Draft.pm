@@ -1,6 +1,6 @@
 package Grimlock::Web::Controller::Draft;
 {
-  $Grimlock::Web::Controller::Draft::VERSION = '0.08';
+  $Grimlock::Web::Controller::Draft::VERSION = '0.10';
 }
 use Moose;
 use namespace::autoclean;

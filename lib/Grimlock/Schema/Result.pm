@@ -1,6 +1,6 @@
 package Grimlock::Schema::Result;
 {
-  $Grimlock::Schema::Result::VERSION = '0.08';
+  $Grimlock::Schema::Result::VERSION = '0.10';
 }
 
 use base 'DBIx::Class::Core';

@@ -58,6 +58,7 @@ my %WriteMakefileArgs = (
     "DBIx::Class::EncodedColumn::Crypt::Eksblowfish::Bcrypt" => "0.00011",
     "DBIx::Class::Helper::Row::ToJSON" => 0,
     "Data::Manager" => 0,
+    "DateTime::Format::Pg" => "0.16007",
     "Email::Sender::Simple" => 0,
     "File::ShareDir" => "1.03",
     "HTML::Scrubber" => 0,
@@ -68,7 +69,7 @@ my %WriteMakefileArgs = (
     "feature" => 0,
     "namespace::autoclean" => 0
   },
-  "VERSION" => "0.08",
+  "VERSION" => "0.10",
   "test" => {
     "TESTS" => "t/*.t"
   }

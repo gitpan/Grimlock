@@ -1,6 +1,6 @@
 package Grimlock::Schema::ResultSet::Entry;
 {
-  $Grimlock::Schema::ResultSet::Entry::VERSION = '0.08';
+  $Grimlock::Schema::ResultSet::Entry::VERSION = '0.10';
 }
 use strict;
 use warnings;
@@ -10,6 +10,7 @@ sub front_page_entries {
   my ($self, $limit) = @_;
   return $self->search(
     {
+      parent    => undef,
       published => 1
     }, 
     {

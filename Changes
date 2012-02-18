@@ -1,10 +1,40 @@
 ==================================================
-Changes from 2011-02-17 00:00:00 +0000 to present.
+Changes from 2011-02-18 00:00:00 +0000 to present.
 ==================================================
 
------------------------------------------
-version 0.08 at 2012-02-17 22:41:29 +0000
------------------------------------------
+-------------------------------------
+version  at 2012-02-18 03:56:35 +0000
+-------------------------------------
+
+  Change: 7b178b2039fd2ab0f0d7fc21f3e18521c9da0571
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-17 20:56:35 +0000
+
+    removed debug plugin by default 
+
+  Change: 0a1df6660265c1fe30c26eda3583e8d9925fb2db
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-17 20:56:18 +0000
+
+    fixed up unpublished posts coming through 
+
+  Change: f4750b6c93cce86a0843ff4a5981e1a287494530
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-17 20:54:17 +0000
+
+    fixed up reply title issue 
+
+  Change: 2a8e169c7f15e0f48dca1b191ce42ebcbae660a4
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-17 20:32:25 +0000
+
+    doc updates 
+
+  Change: 707f253cc7e9de9283ae44b3fb18450465f853f2
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-17 15:49:14 +0000
+
+    added DateTime::Format::Pg 
 
   Change: 7f8b78bcd0d0761f961fbe573b6a1bcb37581d55
   Author: Devin Austin <dhoss@cpan.org>
