@@ -24,6 +24,7 @@ my %WriteMakefileArgs = (
   },
   "DISTNAME" => "Grimlock",
   "EXE_FILES" => [
+    "script/dbic-diff",
     "script/grimlock_deploy_schema.pl",
     "script/grimlock_web.psgi",
     "script/grimlock_web_create.pl",
@@ -69,7 +70,7 @@ my %WriteMakefileArgs = (
     "feature" => 0,
     "namespace::autoclean" => 0
   },
-  "VERSION" => "0.10",
+  "VERSION" => "0.11",
   "test" => {
     "TESTS" => "t/*.t"
   }

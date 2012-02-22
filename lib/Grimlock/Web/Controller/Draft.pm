@@ -1,6 +1,6 @@
 package Grimlock::Web::Controller::Draft;
 {
-  $Grimlock::Web::Controller::Draft::VERSION = '0.10';
+  $Grimlock::Web::Controller::Draft::VERSION = '0.11';
 }
 use Moose;
 use namespace::autoclean;
@@ -26,7 +26,7 @@ sub base : Chained('/api/base') PathPart('') CaptureArgs(0) {}
 
 sub load_draft : Chained('base') PathPart('draft') CaptureArgs(1) {
   my ( $self, $c, $draftid ) = @_;
-  my $draft = $c->model('Database::Draft')->find({
+  my $draft = $c->model('Database::Entry')->find({
       display_title => $draftid,
   });
   $c->stash( draft => $draft );
@@ -59,6 +59,7 @@ sub create_POST {
 sub browse : Chained('load_draft') PathPart('') Args(0) ActionClass('REST') {
   my ( $self, $c ) = @_;
   my $draft = $c->stash->{'draft'};
+  $c->stash( template => 'draft/browse.tt');
   return $self->status_bad_request($c,
     message => "No such draft"
   ) unless $draft;
@@ -89,29 +90,22 @@ sub browse_DELETE {
   );
 }
 
-sub publish : Chained('load_draft') PathPart('publish') Args(0) ActionClass('REST') {
-  my ($self, $c) = @_;
-  $c->stash( template => 'draft/browse.tt')
-}
 
-
-sub publish_POST {
+sub browse_PUT {
   my ( $self, $c ) = @_;
   my $params ||=  $c->req->data || $c->req->params;
   my $draft = $c->stash->{'draft'};
   my $user = $c->user;
-  my $message = $params->{'published'} ? 'Published' : 'Saved';
-  my $entry = $user->update_or_create_related('entries', {
-    title => $params->{'title'},
-    body  => $params->{'body'},
-    published => $params->{'published'} ? 1 : 0
-  }) ;
-  
+  my $published = $params->{'published'} ? 1 : 0;
+  my $message = $published ? 'Published' : 'Saved';
+  my $entry = $draft->update({
+    title     => $params->{'title'},
+    body      => $params->{'body'},
+    published => $published
+  });
   return $self->status_bad_request($c,
     message => "Couldn't publish draft: $!"
   ) unless $draft;
-
-  $draft->delete if $params->{'published'};
 
   return $self->status_ok($c,
     entity => {

@@ -1,6 +1,6 @@
 package Grimlock::Schema::Result::Session;
 {
-  $Grimlock::Schema::Result::Session::VERSION = '0.10';
+  $Grimlock::Schema::Result::Session::VERSION = '0.11';
 }
 
 use Grimlock::Schema::Candy -components => [

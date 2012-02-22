@@ -1,6 +1,6 @@
 package Grimlock::Schema::Result::Entry;
 {
-  $Grimlock::Schema::Result::Entry::VERSION = '0.10';
+  $Grimlock::Schema::Result::Entry::VERSION = '0.11';
 }
 
 use Grimlock::Schema::Candy -components => [
@@ -123,6 +123,7 @@ sub scrubber {
 
 sub clean_params {
   my ( $self, $params ) = @_;
+  # need to add a filter to deal with this
   my $scrubber = $self->scrubber;
   for my $column ( @{ $params } ) {
     warn "CLEANING $column";

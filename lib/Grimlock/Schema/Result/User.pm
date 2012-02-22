@@ -1,6 +1,6 @@
 package Grimlock::Schema::Result::User;
 {
-  $Grimlock::Schema::Result::User::VERSION = '0.10';
+  $Grimlock::Schema::Result::User::VERSION = '0.11';
 }
 
 use Grimlock::Schema::Candy -components => [
@@ -61,8 +61,11 @@ has_many 'entries' => 'Grimlock::Schema::Result::Entry', {
   'foreign.author' => 'self.userid',
 };
 
-has_many 'drafts' => 'Grimlock::Schema::Result::Draft', {
-  'foreign.author' => 'self.userid',
+has_many 'drafts' => 'Grimlock::Schema::Result::Entry', {
+  'foreign.author'    => 'self.userid',
+},
+{
+  'foreign.published' => undef
 };
 
 has_many 'user_roles' => 'Grimlock::Schema::Result::UserRole', {
@@ -108,7 +111,11 @@ sub generate_random_pass {
 
 sub create_entry {
   my ( $self, $params ) = @_;
-  $self->add_to_entries($params);
+  return $self->entries->update_or_create($params,
+    {
+      key => 'entries_title'
+    }
+  );
 }
 
 sub TO_JSON {

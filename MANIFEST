@@ -11,7 +11,6 @@ lib/Grimlock.pm
 lib/Grimlock/Schema.pm
 lib/Grimlock/Schema/Candy.pm
 lib/Grimlock/Schema/Result.pm
-lib/Grimlock/Schema/Result/Draft.pm
 lib/Grimlock/Schema/Result/Entry.pm
 lib/Grimlock/Schema/Result/Role.pm
 lib/Grimlock/Schema/Result/Session.pm
@@ -29,7 +28,6 @@ lib/Grimlock/Web/Model/Database.pm
 lib/Grimlock/Web/Model/Email.pm
 lib/Grimlock/Web/View/HTML.pm
 lib/Grimlock/Web/View/JSON.pm
-root/favicon.ico
 root/site/draft/browse.tt
 root/site/entry/browse.tt
 root/site/entry/create.tt
@@ -71,11 +69,15 @@ root/static/images/btn_88x31_powered.png
 root/static/images/btn_88x31_powered_shadow.png
 root/static/images/catalyst_logo.png
 root/static/images/delete.png
+root/static/images/favicon.ico
+root/static/images/header.jpg
+script/dbic-diff
 script/grimlock_deploy_schema.pl
 script/grimlock_web.psgi
 script/grimlock_web_create.pl
 script/grimlock_web_server.pl
 sql/c040455291b2b29e4367-index.sql
+sql/d8ad2c738de579160ea7d6a99f53e25de900301e-2a4a1088659001d67eefb3d987993d4a3470b2d9.sql
 t/controller_Draft.t
 t/controller_Entry.t
 t/controller_User.t

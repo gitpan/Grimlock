@@ -1,6 +1,6 @@
 package Grimlock;
 {
-  $Grimlock::VERSION = '0.10';
+  $Grimlock::VERSION = '0.11';
 }
 
 =head1 NAME

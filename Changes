@@ -1,6 +1,58 @@
 ==================================================
-Changes from 2011-02-18 00:00:00 +0000 to present.
+Changes from 2011-02-22 00:00:00 +0000 to present.
 ==================================================
+
+-------------------------------------
+version  at 2012-02-22 21:51:16 +0000
+-------------------------------------
+
+  Change: 060ae1e973f93ac563e44483f39cf9839168d99f
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-22 14:51:16 +0000
+
+    fixed up css a little more 
+
+  Change: b451af8dc905bcf2b6ab59f4a8eaf8881d584095
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-22 14:00:25 +0000
+
+    cleaned up css a bit 
+
+  Change: 8f4636b3e2dd7bf3f102e71705e4af0b017b8609
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-22 13:49:57 +0000
+
+    added logo and favicon 
+
+  Change: a7a4ab69d26397a64de7f621dec615bdb0bb332f
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-22 13:32:21 +0000
+
+    slight changes to header/footer and title config 
+
+  Change: d60462a6a218edd0e892875c6d80c11570d8bb7c
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-22 13:22:51 +0000
+
+    fixed up publishing stuff 
+
+  Change: fa4c18b13fd8b9edfd376242a488a0cd97f4b932
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-20 13:13:58 +0000
+
+    added dbic-diff script, and new sql diff 
+
+  Change: 2a4a1088659001d67eefb3d987993d4a3470b2d9
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-19 20:45:28 +0000
+
+    removed draft table, updated draft controller/api and tests 
+
+  Change: d8ad2c738de579160ea7d6a99f53e25de900301e
+  Author: Devin Austin <dhoss@cpan.org>
+  Date : 2012-02-19 19:01:45 +0000
+
+    slight change to view per debugging options 
 
 -------------------------------------
 version  at 2012-02-18 03:56:35 +0000

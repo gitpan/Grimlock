@@ -55,4 +55,4 @@ requires:
   namespace::autoclean: 0
 resources:
   repository: git://github.com/dhoss/Grimlock.git
-version: 0.10
+version: 0.11
